@@ -1,0 +1,9 @@
+﻿<link rel="stylesheet" href="/public/style.css">
+
+<h1> 新 闻 列 表 </h1>
+
+<ul>
+	<%list.forEach(function(item){%>
+		<li><a href="/news/<%= item.id%>"><%=item.title%></a></li>
+	<%});%>
+</ul>

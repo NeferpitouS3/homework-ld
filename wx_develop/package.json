@@ -1,0 +1,28 @@
+{
+  "name": "wx_develop",
+  "version": "1.0.0",
+  "description": "nodejs4wx_develop",
+  "main": "wx_robot.js",
+  "dependencies": {
+    "connect": "^3.6.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-generator": "^4.14.1",
+    "later": "^1.2.0",
+    "wechat": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeferpitouS3/wx_develop.git"
+  },
+  "author": "lindong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeferpitouS3/wx_develop/issues"
+  },
+  "homepage": "https://github.com/NeferpitouS3/wx_develop#readme"
+}
