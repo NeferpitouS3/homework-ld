@@ -6,16 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NeferpitouS3/homework-ld.git"
-  },
   "author": "neferpitou",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NeferpitouS3/homework-ld/issues"
-  },
-  "homepage": "https://github.com/NeferpitouS3/homework-ld#readme",
   "dependencies": {
     "clone": "^2.1.1",
     "cookie-parser": "^1.4.3",
