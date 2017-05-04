@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     secret:'1234',
     name:'mynote',
-    cookie:{maxAge:1000*60*20},
+    cookie:{maxAge:1000*60*60*24*7},    //实现一周内免登录
     resave:false,
     saveUninitialized:true
 }));
@@ -52,9 +52,13 @@ app.get('/',function (req,res) {
 });
 
 app.get('/register',function (req,res) {
+    if(req.session.user){
+        return res.redirect('/');
+    }
     res.render('register',{
         user:req.session.user,
-        title:'注册'
+        title:'注册',
+        msg:'0'
     });
 });
 
@@ -83,7 +87,11 @@ app.post('/register',function (req,res) {
         }
         if(user){
             console.log('用户名已存在');
-            return res.redirect('/register');
+            return res.render('register',{
+                user:req.session.user,
+                title:'注册',
+                msg:'1'        //判断用户名是否已经存在
+            });
         }
         var md5 = crypto.createHash('md5'),
             md5password = md5.update(password).digest('hex');
@@ -104,9 +112,13 @@ app.post('/register',function (req,res) {
 });
 
 app.get('/login',function (req,res) {
+    if(req.session.user){
+        return res.redirect('/');
+    }
     res.render('login',{
         user:req.session.user,
-        title:'登录'
+        title:'登录',
+        msg:'0'
     });
 });
 
@@ -121,13 +133,21 @@ app.post('/login',function (req,res) {
         }
         if(!user){
             console.log('用户不存在');
-            return res.redirect('/login');
+            return res.render('login',{
+                user:req.session.user,
+                title:'登录',
+                msg:'1'
+            });
         }
         var md5 = crypto.createHash('md5'),
             md5password = md5.update(password).digest('hex');
         if(user.password !== md5password){
             console.log('密码错误！');
-            return res.redirect('/login');
+            return res.render('login',{
+                user:req.session.user,
+                title:'登录',
+                msg:'1'
+            });
         }
         console.log('登录成功！');
         user.password = null;         //为了安全起见，删除密码

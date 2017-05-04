@@ -1,5 +1,5 @@
 <%- include header %>
-
+    <p id="mess" style="display: none;"><%= msg %></p>
     <div class="text-center page-title">用户登录</div>
     <div class="container">
         <div class="row">
@@ -18,3 +18,12 @@
     </div>
 
 <%- include footer %>
+<script>
+    $(function () {
+        var text = $('#mess').text()
+        if(text == '1'){
+            alert('用户不存在或密码错误')
+        }
+    });
+</script>
+</html>
