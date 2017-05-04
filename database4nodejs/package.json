@@ -1,0 +1,24 @@
+{
+  "name": "database4nodejs",
+  "version": "1.0.0",
+  "description": "数据库操作",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeferpitouS3/homework-ld.git"
+  },
+  "author": "neferpitou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeferpitouS3/homework-ld/issues"
+  },
+  "homepage": "https://github.com/NeferpitouS3/homework-ld#readme",
+  "dependencies": {
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.7",
+    "mysql": "^2.13.0"
+  }
+}

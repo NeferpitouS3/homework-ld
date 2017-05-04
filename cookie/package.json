@@ -2,14 +2,26 @@
   "name": "cookie",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "session.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeferpitouS3/homework-ld.git"
+  },
+  "author": "neferpitou",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeferpitouS3/homework-ld/issues"
+  },
+  "homepage": "https://github.com/NeferpitouS3/homework-ld#readme",
   "dependencies": {
+    "clone": "^2.1.1",
     "cookie-parser": "^1.4.3",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "parseurl": "^1.3.1",
+    "uuid": "^3.0.1"
   }
 }
